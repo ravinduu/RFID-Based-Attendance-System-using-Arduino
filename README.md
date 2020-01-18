@@ -8,13 +8,21 @@ Components Connect With Arduino
 Pin   |    Wiring to Arduino Uno
 --------------------------------
 SDA   |    Digital 10
+--------------------------------
 SCK   |    Digital 13
+--------------------------------
 MOSI  |    Digital 11
+--------------------------------
 MISO  |    Digital 12
+--------------------------------
 IRQ   |    unconnected
+--------------------------------
 GND   |    GND
+--------------------------------
 RST   |    Digital 9
+--------------------------------
 3.3V  |    3.3V
+--------------------------------
 
 Caution: You must power this device to 3.3V!
 

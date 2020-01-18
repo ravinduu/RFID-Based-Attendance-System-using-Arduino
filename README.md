@@ -4,6 +4,7 @@ RFID Based Attendance System using Arduino and RFID MFRC522 Module.
 Components Connect With Arduino
 
 1) RFID MFRC522
+---------------
 
 Pin   |    Wiring to Arduino Uno
 --------------------------------
@@ -28,12 +29,18 @@ Caution: You must power this device to 3.3V!
 
 
 2) Real Time Clock (RTC) Module (DS1307 and DS3231)
+--------------------------------------------------
 
-Pin       Wiring to Arduino Uno
-SCL       A5
-SDA       A4
-VCC       5V
-GND       GND
+Pin    |   Wiring to Arduino Uno
+--------------------------------
+SCL    |   A5
+--------------------------------
+SDA    |   A4
+--------------------------------
+VCC    |   5V
+--------------------------------
+GND    |   GND
+--------------------------------
 
 If you’re using other Arduino board rather than the uno, chek out what are their SCL and SDA pins.
 
@@ -42,20 +49,33 @@ If you’re using other Arduino board rather than the uno, chek out what are the
     Leonardo: SDA (20); SCL(21)
 
 3) SD Card module
+-----------------
 
-SD card module  Wiring to Arduino Uno                   Wiring to Arduino Mega
-VCC                 3.3V or 5V (check module’s datasheet)       3.3V or 5V (check module’s datasheet)
-CS                  4                                       53
-MOSI              11                                      51
-CLK                 13                                    52
-MISO              12                                      50
-GND                 GND                                   GND
+SD card module  |   Wiring to Arduino Uno
+---------------------------------------------------------
+VCC             |   3.3V or 5V (check module’s datasheet)
+---------------------------------------------------------
+CS              |   4
+---------------------------------------------------------
+MOSI            |   11
+---------------------------------------------------------
+CLK             |   13
+---------------------------------------------------------
+MISO            |   12
+---------------------------------------------------------
+GND             |   GND
+---------------------------------------------------------
 
 4) I2C module
+-------------
 
-I2C     Character LCD   Arduino
-GND         GND
-VCC         5 V
-SDA         A4
-SDL         A5
+I2C Character LCD |  Arduino
+----------------------------
+GND         	  |  GND
+----------------------------
+VCC        	  |  5 V
+----------------------------
+SDA        	  |  A4
+----------------------------
+SDL         	  |  A5
 

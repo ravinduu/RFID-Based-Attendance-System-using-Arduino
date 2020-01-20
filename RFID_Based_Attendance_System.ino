@@ -46,8 +46,8 @@ void setup() {
     while (1);
   }
   else{
-      rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-    //rtc.adjust(DateTime(2020, 1, 9, 16, 59, 45));//change the time when compiling
+      rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));//time will set auto when it compiles
+    //rtc.adjust(DateTime(2020, 1, 9, 16, 59, 45));// manually set time
   }
   if (rtc.lostPower()) {
     Serial.println(F("RTC lost power, lets set the time!"));
@@ -61,11 +61,12 @@ void setup() {
 //  Serial.print(F("Initializing SD card..."));
   digitalWrite(CS_SD,LOW);
 
-//  if (!SD.begin(4)) {
+//  if (!SD.begin(4)) {//checks the sd card inserted and if it not the program will not working
 //    Serial.println(F("initialization failed!"));
 //    while (1);
 //  }
 //  Serial.println(F("initialization done."));
+
   
  File  myFile = SD.open("test.txt", FILE_WRITE);
   if (myFile) {

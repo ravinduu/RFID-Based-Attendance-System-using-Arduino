@@ -1,10 +1,10 @@
 #include <SPI.h>
-#include <MFRC522.h>
-#include <RTClib.h>
-#include <SD.h>
+#include <MFRC522.h> //library for rfid sensor
+#include <RTClib.h> //library for rtc module
+#include <SD.h> //library for sd card module
 #include <Wire.h> 
-#include <LiquidCrystal_I2C.h>
-#include <Servo.h>
+#include <LiquidCrystal_I2C.h> //library for i2c module
+#include <Servo.h> //library for servo moter
 
 //define pins for rfid sensor
 #define SS_PIN 10
@@ -12,15 +12,13 @@
 //define select pin for SD card module
 #define CS_SD 4 
 
-Servo myservo;  // create servo object to control a servo
+Servo myservo;  // create servo object to control a servo.
 MFRC522 mfrc522(SS_PIN, RST_PIN); // Create MFRC522 instance.
 RTC_DS3231 rtc;// Instance of the class for RTC
 LiquidCrystal_I2C lcd(0x27,2,1,0,4,5,6,7,3,POSITIVE);//instance for lcd display
 
-
-//char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-const int numOfCards = 5;
-byte cards[numOfCards][4] = {{0x69, 0x38, 0xFD, 0x6E},{0x29, 0xCE, 0xE2, 0x6E},{0xD9, 0x45, 0xE5, 0x6E},{0xA9, 0x76, 0x47, 0xB8},{0x59, 0x3F, 0x16, 0x98}}; // UIDs of cards
+const int numOfCards = 5;//the nuber of cards used. this can change as you want
+byte cards[numOfCards][4] = {{0x69, 0x38, 0xFD, 0x6E},{0x29, 0xCE, 0xE2, 0x6E},{0xD9, 0x45, 0xE5, 0x6E},{0xA9, 0x76, 0x47, 0xB8},{0x59, 0x3F, 0x16, 0x98}}; // array of UIDs of rfid cards
 int n = 0;//n is for the total number of students//j is for to detect the card is valid or not
 int numCard[numOfCards]; //this array content the details of cards that already detect or not .
 String names[numOfCards] = {"Janith Hasitha","Nirosh Bandara","Manoj Akalanka","Milan Sankalpa","Chamila Bandara"};//student names
@@ -61,7 +59,7 @@ void setup() {
 //  Serial.print(F("Initializing SD card..."));
   digitalWrite(CS_SD,LOW);
 
-//  if (!SD.begin(4)) {//checks the sd card inserted and if it not the program will not working
+//  if (!SD.begin(4)) {//checks the sd card inserted and if it not the program will not working.
 //    Serial.println(F("initialization failed!"));
 //    while (1);
 //  }
@@ -148,7 +146,7 @@ void logCardData(String name, long sNumber, int j){
   numCard[j] = 1;//put 1 in the numCard array : numCard[j]={1,1} to let the arduino know if the card was detecting
   n++;//to get the count
 
-  //display details to the console
+  //display details to the console (serial monitor)
   Serial.print(n);//print number
   Serial.print(F("\t"));
   Serial.print(sNumber); //print name of student 
@@ -160,7 +158,7 @@ void logCardData(String name, long sNumber, int j){
   if(now.month()<10){Serial.print("0");Serial.print(now.month(),DEC);}
   else Serial.print(now.month(),DEC); //print month
   Serial.print(F("-"));
-  if(now.day()<10){Serial.print("0");Serial.print(now.day(),DEC);}
+  if(now.day()<10){Serial.print("0");Serial.print(now.day(),DEC);} //if the day is one digit this will display it with zero in front as two digits.
   else Serial.print(now.day(),DEC);
   Serial.print(F("\t")); 
   if(now.hour()<10){Serial.print("0");Serial.print(now.hour(),DEC);}
@@ -175,7 +173,7 @@ void logCardData(String name, long sNumber, int j){
   Serial.println(F("--:--:-- ")); 
 
   digitalWrite(CS_SD,LOW);
-  File  myFile = SD.open("test.txt", FILE_WRITE);
+  File  myFile = SD.open("test.txt", FILE_WRITE);//record the data to the sd card
   if (myFile) {
       myFile.print(n);//print number
       myFile.print(F("\t"));
@@ -239,7 +237,7 @@ void alreadyRead(String name, long sNumber, int j){
   numCard[j] = 0;//put 1 in the numCard array : numCard[j]={1,1} to let the arduino know if the card was detecting
   n--;//to get the count
   
-  //display details to the console
+  //display details to the console (serial monitor)
   Serial.print(n);//print number
   Serial.print(F("\t"));
   Serial.print(sNumber); //print name of student 
@@ -311,7 +309,7 @@ void alreadyRead(String name, long sNumber, int j){
   lcd.clear();
 }
 
-void printLoopLCD(){//method for display date and time and number of students attend 
+void printLoopLCD(){//method for display date and time and number of students attendance to the lcd dislpay 
   DateTime now = rtc.now();
   lcd.home ();// go home
   lcd.setCursor (1, 0);
@@ -365,10 +363,11 @@ void displayAllow(String name,long sNumber){
 }
 
 void checkTime(){
+  //check the time if the time is 6pm the system will stop working (time out)
     lcd.home ();
     lcd.clear();
     
-    if(n != 0){
+    if(n != 0){ //check the nuber of student is 0 or not
       Serial.println(F("Warning!"));
       Serial.print(F("Count not zero!"));
       lcd.setCursor (6, 1 );

@@ -1,17 +1,21 @@
 # RFID-Based-Attendance-System-using-Arduino
 RFID Based Attendance System using Arduino and RFID MFRC522 Module.
 
-#Why did we decide to make it?
+# Why did we decide to make it?
 Attendance in University is generally paper based which may sometimes cause errors. Taking attendance manually consumes more time. So, In this project we have designed RFID Based Attendance System using Arduino and RFID MFRC522 Module. In this system, each student is issued an RFID card as their id card and their attendance is marked when they touch their card to RFID reader.
 
-#What is RFID?
+# What is RFID?
 RFID stands for Radio Frequency Identification.Here digital data stored in RFID tags are captured by a reader via radio waves.
 
-#Components we used in the project
+# Components we used in the project
 1.Arduino Uno Board
+
 2.RFID MRFC522 module
+
 3.SD card module
+
 4.RTC module
+
 5.LCD display (20*4) with i2c lcd module
 
 # Components Connect With Arduino UNO
@@ -93,3 +97,5 @@ SDA        	  |  A4
 SDL         	  |  A5
 ----------------------------
 
+
+# check out our project at : https://create.arduino.cc/projecthub/team_chkr/rfid-based-smart-attendance-system-46b045?ref=user&ref_id=1435285&offset=0

@@ -391,7 +391,7 @@ void checkTime(){
       lcd.print(n);
  //    }    
          
-    delay(46800000);
+    delay(46800000);//delay for 12 hours
     lcd.clear();
 }
 

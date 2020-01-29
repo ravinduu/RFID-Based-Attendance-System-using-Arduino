@@ -9,9 +9,13 @@ RFID stands for Radio Frequency Identification.Here digital data stored in RFID 
 
 # Components we used in the project
 1.Arduino Uno Board
+
 2.RFID MRFC522 module
+
 3.SD card module
+
 4.RTC module
+
 5.LCD display (20*4) with i2c lcd module
 
 # Components Connect With Arduino UNO

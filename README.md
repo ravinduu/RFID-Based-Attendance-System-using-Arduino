@@ -100,5 +100,3 @@ SDL         	  |  A5
 
 
 # check out our project at : https://create.arduino.cc/projecthub/team_chkr/rfid-based-smart-attendance-system-46b045?ref=user&ref_id=1435285&offset=0
-
- check out our project at : [![Build Status]

@@ -9,15 +9,15 @@ Attendance in University is generally paper based which may sometimes cause erro
 RFID stands for Radio Frequency Identification.Here digital data stored in RFID tags are captured by a reader via radio waves.
 
 # Components we used in the project
-1.Arduino Uno Board
+* Arduino Uno Board
 
-2.RFID MRFC522 module
+* RFID MRFC522 module
 
-3.SD card module
+* SD card module
 
-4.RTC module
+* RTC module
 
-5.LCD display (20*4) with i2c lcd module
+* LCD display (20*4) with i2c lcd module
 
 # Components Connect With Arduino UNO
 

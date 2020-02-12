@@ -21,7 +21,7 @@ RFID stands for Radio Frequency Identification.Here digital data stored in RFID 
 
 # Components Connect With Arduino UNO
 
-1) RFID MFRC522
+## RFID MFRC522
 ---------------
 
 |Pin   |    Wiring to Arduino Uno|
@@ -30,27 +30,22 @@ RFID stands for Radio Frequency Identification.Here digital data stored in RFID 
 |SCK   |    Digital 13|
 |MOSI  |    Digital 11|
 |MISO  |    Digital 12|
-IRQ   |    unconnected
-GND   |    GND
-RST   |    Digital 9
-3.3V  |    3.3V
+|IRQ   |    unconnected
+|GND   |    GND
+|RST   |    Digital 9
+|3.3V  |    3.3V
 
 Caution: You must power this device to 3.3V!
 
 
-2) Real Time Clock (RTC) Module (DS1307 and DS3231)
+## Real Time Clock (RTC) Module (DS1307 and DS3231)
 --------------------------------------------------
 
 Pin    |   Wiring to Arduino Uno
---------------------------------
 SCL    |   A5
---------------------------------
 SDA    |   A4
---------------------------------
 VCC    |   5V
---------------------------------
 GND    |   GND
---------------------------------
 
 If you’re using other Arduino board rather than the uno, chek out what are their SCL and SDA pins.
 
@@ -58,37 +53,25 @@ If you’re using other Arduino board rather than the uno, chek out what are the
     MEGA: SDA (20); SCL(21)
     Leonardo: SDA (20); SCL(21)
 
-3) SD Card module
+## SD Card module
 -----------------
 
 SD card module  |   Wiring to Arduino Uno
----------------------------------------------------------
 VCC             |   3.3V or 5V (check module’s datasheet)
----------------------------------------------------------
 CS              |   4
----------------------------------------------------------
 MOSI            |   11
----------------------------------------------------------
 CLK             |   13
----------------------------------------------------------
 MISO            |   12
----------------------------------------------------------
 GND             |   GND
----------------------------------------------------------
 
-4) I2C module
+## I2C module
 -------------
 
 I2C Character LCD |  Arduino
-----------------------------
 GND         	  |  GND
-----------------------------
 VCC        	  |  5 V
-----------------------------
 SDA        	  |  A4
-----------------------------
 SDL         	  |  A5
-----------------------------
 
 
 

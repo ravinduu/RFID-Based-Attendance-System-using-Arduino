@@ -58,6 +58,7 @@ If you’re using other Arduino board rather than the uno, chek out what are the
 -----------------
 
 |SD card module  |   Wiring to Arduino Uno|
+|----------------|------------------------|
 VCC             |   3.3V or 5V (check module’s datasheet)
 CS              |   4
 MOSI            |   11
@@ -69,6 +70,7 @@ GND             |   GND
 -------------
 
 |I2C Character LCD |  Arduino|
+|------------------|---------|
 GND         	  |  GND
 VCC        	  |  5 V
 SDA        	  |  A4

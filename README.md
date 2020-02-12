@@ -24,24 +24,16 @@ RFID stands for Radio Frequency Identification.Here digital data stored in RFID 
 1) RFID MFRC522
 ---------------
 
-Pin   |    Wiring to Arduino Uno
---------------------------------
-SDA   |    Digital 10
---------------------------------
-SCK   |    Digital 13
---------------------------------
-MOSI  |    Digital 11
---------------------------------
-MISO  |    Digital 12
---------------------------------
+|Pin   |    Wiring to Arduino Uno|
+|------|-------------------------|
+|SDA   |    Digital 10|
+|SCK   |    Digital 13|
+|MOSI  |    Digital 11|
+|MISO  |    Digital 12|
 IRQ   |    unconnected
---------------------------------
 GND   |    GND
---------------------------------
 RST   |    Digital 9
---------------------------------
 3.3V  |    3.3V
---------------------------------
 
 Caution: You must power this device to 3.3V!
 
@@ -99,5 +91,6 @@ SDL         	  |  A5
 ----------------------------
 
 
-## check out our project at Arduino
+
+## check out our project at Arduino 
 [RFID Based Attendance System](https://create.arduino.cc/projecthub/team_chkr/rfid-based-smart-attendance-system-46b045?ref=user&ref_id=1435285&offset=0)

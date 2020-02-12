@@ -41,7 +41,7 @@ Caution: You must power this device to 3.3V!
 ## Real Time Clock (RTC) Module (DS1307 and DS3231)
 --------------------------------------------------
 
-Pin    |   Wiring to Arduino Uno
+|Pin    |   Wiring to Arduino Uno|
 SCL    |   A5
 SDA    |   A4
 VCC    |   5V
@@ -56,7 +56,7 @@ If you’re using other Arduino board rather than the uno, chek out what are the
 ## SD Card module
 -----------------
 
-SD card module  |   Wiring to Arduino Uno
+|SD card module  |   Wiring to Arduino Uno|
 VCC             |   3.3V or 5V (check module’s datasheet)
 CS              |   4
 MOSI            |   11
@@ -67,7 +67,7 @@ GND             |   GND
 ## I2C module
 -------------
 
-I2C Character LCD |  Arduino
+|I2C Character LCD |  Arduino|
 GND         	  |  GND
 VCC        	  |  5 V
 SDA        	  |  A4

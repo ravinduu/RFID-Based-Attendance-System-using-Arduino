@@ -42,6 +42,7 @@ Caution: You must power this device to 3.3V!
 --------------------------------------------------
 
 |Pin    |   Wiring to Arduino Uno|
+|-------|------------------------|
 SCL    |   A5
 SDA    |   A4
 VCC    |   5V

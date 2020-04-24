@@ -49,10 +49,11 @@ VCC    |   5V
 GND    |   GND
 
 If you’re using other Arduino board rather than the uno, chek out what are their SCL and SDA pins.
-
-    Nano: SDA (A4); SCL(A5)
-    MEGA: SDA (20); SCL(21)
-    Leonardo: SDA (20); SCL(21)
+    
+|Pin    |Nano   |Mega   |Leonardo   |
+|-------|-------|-------|-----------|
+|SDA |A4 |20 |20 |
+|SCL    |A5 |21 |21 |
 
 ## SD Card module
 -----------------

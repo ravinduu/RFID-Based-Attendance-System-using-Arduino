@@ -1,3 +1,5 @@
+:red_circle: DEPRECATED - No longer actively maintained
+===
 RFID Based Attendance System
 ===
 RFID Based Attendance System using Arduino and RFID MFRC522 Module.
